@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System Layout</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .custom-header {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            padding: 30px 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .main-content {
+            background-color: #bae6fd;
+            color: #0369a1;
+            padding: 30px;
+            border-radius: 6px;
+            min-height: 350px;
+            font-weight: bold;
+        }
+        .sidebar {
+            background-color: #bbf7d0;
+            color: #166534;
+            padding: 30px;
+            border-radius: 6px;
+            min-height: 350px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navbar với menu điều hướng có dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyBootstrapSite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#">Development</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">SEO Optimization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Sử dụng Container giới hạn chiều rộng nội dung -->
+    <div class="container my-4">
+        
+        <!-- Header Section -->
+        <header class="row mb-4">
+            <div class="col-12 custom-header rounded">
+                <h1>Chào mừng đến với trang web Bootstrap Grid</h1>
+                <p class="mb-0 text-muted">Thiết kế bố cục responsive chuẩn xác bằng Container, Row và Column</p>
+            </div>
+        </header>
+
+        <!-- Main Layout Row (Chia cột Grid System) -->
+        <div class="row g-4">
+            <!-- Main Content: col-md-8 trên desktop, col-12 trên mobile -->
+            <main class="col-12 col-md-8">
+                <div class="main-content shadow-sm">
+                    <h2>Nội dung chính (Main Content)</h2>
+                    <p>Khu vực này hiển thị nội dung cốt lõi của trang web. Trên màn hình lớn (desktop), nó chiếm 8 cột (<code>col-md-8</code>). Trên thiết bị di động, nó tự động trải rộng toàn bộ chiều ngang (<code>col-12</code>).</p>
+                    <p>Bootstrap Grid System giúp tự động sắp xếp các phần tử một cách mượt mà và trực quan.</p>
+                </div>
+            </main>
+
+            <!-- Sidebar: col-md-4 trên desktop, col-12 trên mobile -->
+            <aside class="col-12 col-md-4">
+                <div class="sidebar shadow-sm">
+                    <h3>Sidebar</h3>
+                    <p>Chứa thông tin phụ, tin tức, quảng cáo hoặc menu liên quan. Trên desktop, cột này chiếm 4 cột (<code>col-md-4</code>) nằm bên phải. Trên mobile, sidebar sẽ tự động chuyển xuống bên dưới nội dung chính.</p>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2026 MyBootstrapSite. Bản quyền thuộc về bạn.</p>
+    </footer>
+
+    <!-- Nhúng Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
